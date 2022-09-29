@@ -41,21 +41,25 @@
     margin-left: 26px;
 }
 
+.endereco {
+    margin-left: -2px;
+}
+
 .telefone {
-    margin-left: 12px;
+    margin-left: 9px;
 }
 
 .email {
-    margin-left: 29px;
+    margin-left: 28px;
 }
 
 .tipo-sanguineo {
     color: red;
-    margin-left: -43px;
+    margin-left: -49px;
 }
 
 .senha {
-    margin-left: 22px;
+    margin-left: 23px;
 }
 
 .tipo-sanguineo input {
