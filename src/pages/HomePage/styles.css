@@ -1,0 +1,27 @@
+.h1-home {
+    color: black;
+}
+
+.home-container {
+    background-color: silver;
+    display: flex;
+    height: 85vh;
+}
+
+.home-container div button {
+    background-color: red;
+    border: none;
+    margin-top: 240px;
+    margin-left: 150px;
+    width: 250px;
+    height: 250px;
+    color: black;
+    font-weight: bold;
+    font-size: xx-large;
+    cursor: pointer;
+    border-radius: 130px;
+}
+
+.cadastro-btn {
+    margin-top: -150px;
+}

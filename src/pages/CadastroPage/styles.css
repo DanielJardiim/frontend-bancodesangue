@@ -1,17 +1,5 @@
-.cadastro-page {
-}
-
-.header {
-    display: table-cell;
-    vertical-align: middle;
-    height: 100px;
-    width: 1366px;
-    background-color: red;
-}
-
-.header h1 {
+.h1-cadastro {
     color: white;
-    text-align: center;
 }
 
 .cadastro-container {
@@ -76,4 +64,5 @@
     border-radius: 20px;
     color: white;
     font-size: xx-large;
+    cursor: pointer;
 }

@@ -1,14 +1,19 @@
+import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
 const CadastroPage = () => {
+    const navigate = useNavigate();
+
     const handleSubmit = e => {
         e.preventDefault();
+        console.log('Cadastro - OK');
+        navigate('/');
     };
 
     return (
         <div className="cadastro-page">
             <div className="header">
-                <h1>CADASTRO</h1>
+                <h1 className="h1-cadastro">CADASTRO</h1>
             </div>
             <div className="cadastro-container">
                 <div className="entrar-dados">
@@ -59,7 +64,7 @@ const CadastroPage = () => {
                 </div>
                 <div className="cadastrar-btn">
                     <button
-                        className="btn-cadastro"
+                        className="btn-cadastrar"
                         type="submit"
                         onClick={handleSubmit}
                     >
