@@ -13,12 +13,15 @@ const SobrePage = () => {
     return (
         <div className="sobre-page">
             <div className="sobre-btn">
+                <div className="header">
+                    <h1 className="h1-banco">SOBRE</h1>
+                </div>
                 <button
                     className="btn-sobre"
                     type="submit"
                     onClick={handleSobreVoltar}
                 >
-                    CADASTRAR
+                    VOLTAR
                 </button>
             </div>
         </div>
