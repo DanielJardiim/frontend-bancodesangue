@@ -44,8 +44,16 @@ const CadastroPage = () => {
                 tipoSanguineo,
                 senha
             );
-            console.log(users);
-            limpar();
+            Promise.resolve(users).then(function (value) {
+                if (value.data.msg === 'User Duplicate !') {
+                    console.log(
+                        'Usuario já cadastro, troque a senha e o email !'
+                    );
+                } else {
+                    console.log(value.data);
+                    limpar();
+                }
+            });
         }
     };
 
