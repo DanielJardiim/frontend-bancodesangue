@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './styles.css';
+import { createUsers } from '../../services/api';
 
 const CadastroPage = () => {
     const navigate = useNavigate();
@@ -12,9 +13,23 @@ const CadastroPage = () => {
     const [tipoSanguineo, SetTipoSanguineo] = useState('');
     const [senha, SetSenha] = useState('');
 
-    const handleSubmit = e => {
+    const limpar = () => {
+        SetNome('');
+        SetEndereco('');
+        SetTelefone('');
+        SetEmail('');
+        SetTipoSanguineo('');
+        SetSenha('');
+    };
+
+    const handleCadastrar = e => {
         e.preventDefault();
-        console.log('Cadastro - OK');
+        createUsers(nome, endereco, telefone, email, tipoSanguineo, senha);
+        limpar();
+    };
+
+    const handleVoltar = e => {
+        e.preventDefault();
         navigate('/');
     };
 
@@ -96,11 +111,18 @@ const CadastroPage = () => {
                     <button
                         className="btn-cadastrar"
                         type="submit"
-                        onClick={handleSubmit}
+                        onClick={handleCadastrar}
                     >
                         CADASTRAR
                     </button>
                 </div>
+                <button
+                    className="btn-voltar"
+                    type="submit"
+                    onClick={handleVoltar}
+                >
+                    Voltar
+                </button>
             </div>
         </div>
     );
