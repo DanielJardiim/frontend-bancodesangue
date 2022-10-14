@@ -1,68 +1,47 @@
-.h1-cadastro {
-    color: white;
+.h1-home {
+    color: black;
 }
 
-.cadastro-container {
+.h2-banco {
+    color: black;
+    transform: rotate(-45deg);
+    font-size: 1.5cm;
+}
+
+.h2-cadastro {
+    color: black;
+    transform: rotate(-45deg);
+    font-size: 1.5cm;
+}
+
+.h2-sobre {
+    color: black;
+    transform: rotate(-45deg);
+    font-size: 1.5cm;
+}
+
+.home-container {
     background-color: silver;
     display: flex;
     height: 85vh;
 }
 
-.entrar-dados {
-    padding: 20px;
-    margin-left: 50px;
-    margin-top: 90px;
-}
-
-.entrar-dados label,
-.entrar-dados input {
-    font-weight: bold;
-    padding: 10px;
-    margin: 10px;
-}
-
-.entrar-dados input {
-    width: 500px;
-}
-
-.nome {
-    margin-left: 26px;
-}
-
-.endereco {
-    margin-left: -2px;
-}
-
-.telefone {
-    margin-left: 9px;
-}
-
-.email {
-    margin-left: 28px;
-}
-
-.tipo-sanguineo {
-    color: red;
-    margin-left: -49px;
-}
-
-.senha {
-    margin-left: 23px;
-}
-
-.tipo-sanguineo input {
-    width: 50px;
-}
-
-.cadastrar-btn button {
-    border: none;
+.home-container div button {
     background-color: red;
-    margin-top: 250px;
-    margin-left: 165px;
+    border: none;
+    margin-top: 240px;
+    margin-left: 150px;
     width: 250px;
-    height: 80px;
-    border-radius: 20px;
-    color: white;
+    height: 250px;
+    color: black;
+    font-weight: bold;
     font-size: xx-large;
     cursor: pointer;
+    border-radius: 0% 50% 50% 50%;
+    transform: rotate(45deg);
+}
+
+.cadastro-btn {
+    margin-top: -150px;
+    margin-left: 50px;
 }
