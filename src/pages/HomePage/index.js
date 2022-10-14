@@ -34,8 +34,9 @@ const HomePage = () => {
                         type="submit"
                         onClick={handleBanco}
                     >
-                        BANCO
+                    <h1 className="h2-banco">Banco</h1>                       
                     </button>
+
                 </div>
                 <div className="cadastro-btn">
                     <button
@@ -43,7 +44,7 @@ const HomePage = () => {
                         type="submit"
                         onClick={handleCadastro}
                     >
-                        CADASTRO
+                    <h1 className="h2-cadastro">Cadastro</h1>     
                     </button>
                 </div>
                 <div className="sobre-btn">
@@ -52,7 +53,7 @@ const HomePage = () => {
                         type="submit"
                         onClick={handleSobre}
                     >
-                        SOBRE NÓS
+                    <h1 className="h2-sobre">Sobre nós</h1>    
                     </button>
                 </div>
             </div>
@@ -61,3 +62,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

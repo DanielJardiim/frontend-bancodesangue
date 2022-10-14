@@ -2,6 +2,24 @@
     color: black;
 }
 
+.h2-banco {
+    color: black;
+    transform: rotate(-45deg);
+    font-size: 1.5cm;
+}
+
+.h2-cadastro {
+    color: black;
+    transform: rotate(-45deg);
+    font-size: 1.5cm;
+}
+
+.h2-sobre {
+    color: black;
+    transform: rotate(-45deg);
+    font-size: 1.5cm;
+}
+
 .home-container {
     background-color: silver;
     display: flex;
@@ -27,3 +45,4 @@
     margin-top: -150px;
     margin-left: 50px;
 }
+
