@@ -25,6 +25,17 @@
     width: 500px;
 }
 
+.span-container-cadastro {
+    height: 20px;
+    border-radius: 10px;
+    margin-top: -30px;
+    margin-left: 10px;
+    text-align: center;
+    padding: 10px;
+    color: red;
+    font-weight: bold;
+}
+
 .nome {
     margin-left: 26px;
 }
@@ -54,7 +65,7 @@
     width: 50px;
 }
 
-.cadastrar-btn button {
+.btn-cadastrar {
     border: none;
     background-color: red;
     margin-top: 250px;
@@ -65,4 +76,17 @@
     color: white;
     font-size: xx-large;
     cursor: pointer;
+}
+
+.btn-voltar {
+    width: 125px;
+    height: 40px;
+    border: none;
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 55px;
 }

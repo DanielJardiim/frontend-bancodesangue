@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './styles.css';
+import { createUsers } from '../../services/api';
 
 const CadastroPage = () => {
     const navigate = useNavigate();
@@ -12,9 +13,64 @@ const CadastroPage = () => {
     const [tipoSanguineo, SetTipoSanguineo] = useState('');
     const [senha, SetSenha] = useState('');
 
-    const handleSubmit = e => {
+    const limpar = () => {
+        SetNome('');
+        SetEndereco('');
+        SetTelefone('');
+        SetEmail('');
+        SetTipoSanguineo('');
+        SetSenha('');
+    };
+
+    const handleCadastrar = e => {
         e.preventDefault();
-        console.log('Cadastro - OK');
+
+        // Validations
+        if (
+            nome === '' ||
+            endereco === '' ||
+            telefone === '' ||
+            email === '' ||
+            tipoSanguineo === '' ||
+            senha === ''
+        ) {
+            document.getElementById('cadastro').innerHTML =
+                'Preencha todos os campos !';
+            setTimeout(function () {
+                document.getElementById('cadastro').innerHTML = '';
+                limpar();
+            }, 3000);
+        } else {
+            const users = createUsers(
+                nome,
+                endereco,
+                telefone,
+                email,
+                tipoSanguineo,
+                senha
+            );
+            Promise.resolve(users).then(function (value) {
+                if (value.data.msg === 'User Duplicate !') {
+                    document.getElementById('cadastro').innerHTML =
+                        'Usuario já cadastrado, troque a senha e o email !';
+                    setTimeout(function () {
+                        document.getElementById('cadastro').innerHTML = '';
+                        limpar();
+                    }, 3000);
+                } else {
+                    document.getElementById('cadastro').innerHTML =
+                        'Usuario cadastrado !';
+                    setTimeout(function () {
+                        document.getElementById('cadastro').innerHTML = '';
+                        limpar();
+                    }, 3000);
+                }
+            });
+        }
+    };
+
+    const handleVoltar = e => {
+        e.preventDefault();
         navigate('/');
     };
 
@@ -25,6 +81,9 @@ const CadastroPage = () => {
             </div>
             <div className="cadastro-container">
                 <div className="entrar-dados">
+                    <div className="span-container-cadastro">
+                        <span id="cadastro"></span>
+                    </div>
                     <div className="nome">
                         <label>Nome:</label>
                         <input
@@ -96,11 +155,18 @@ const CadastroPage = () => {
                     <button
                         className="btn-cadastrar"
                         type="submit"
-                        onClick={handleSubmit}
+                        onClick={handleCadastrar}
                     >
                         CADASTRAR
                     </button>
                 </div>
+                <button
+                    className="btn-voltar"
+                    type="submit"
+                    onClick={handleVoltar}
+                >
+                    Voltar
+                </button>
             </div>
         </div>
     );
