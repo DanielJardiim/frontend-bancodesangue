@@ -24,8 +24,29 @@ const CadastroPage = () => {
 
     const handleCadastrar = e => {
         e.preventDefault();
-        createUsers(nome, endereco, telefone, email, tipoSanguineo, senha);
-        limpar();
+
+        // Validations
+        if (
+            nome === '' ||
+            endereco === '' ||
+            telefone === '' ||
+            email === '' ||
+            tipoSanguineo === '' ||
+            senha === ''
+        ) {
+            console.log('Digite todos os campos !');
+        } else {
+            const users = createUsers(
+                nome,
+                endereco,
+                telefone,
+                email,
+                tipoSanguineo,
+                senha
+            );
+            console.log(users);
+            limpar();
+        }
     };
 
     const handleVoltar = e => {
