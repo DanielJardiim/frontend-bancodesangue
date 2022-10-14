@@ -34,7 +34,12 @@ const CadastroPage = () => {
             tipoSanguineo === '' ||
             senha === ''
         ) {
-            console.log('Digite todos os campos !');
+            document.getElementById('cadastro').innerHTML =
+                'Preencha todos os campos !';
+            setTimeout(function () {
+                document.getElementById('cadastro').innerHTML = '';
+                limpar();
+            }, 3000);
         } else {
             const users = createUsers(
                 nome,
@@ -46,12 +51,19 @@ const CadastroPage = () => {
             );
             Promise.resolve(users).then(function (value) {
                 if (value.data.msg === 'User Duplicate !') {
-                    console.log(
-                        'Usuario já cadastro, troque a senha e o email !'
-                    );
+                    document.getElementById('cadastro').innerHTML =
+                        'Usuario já cadastrado, troque a senha e o email !';
+                    setTimeout(function () {
+                        document.getElementById('cadastro').innerHTML = '';
+                        limpar();
+                    }, 3000);
                 } else {
-                    console.log(value.data);
-                    limpar();
+                    document.getElementById('cadastro').innerHTML =
+                        'Usuario cadastrado !';
+                    setTimeout(function () {
+                        document.getElementById('cadastro').innerHTML = '';
+                        limpar();
+                    }, 3000);
                 }
             });
         }
@@ -69,6 +81,9 @@ const CadastroPage = () => {
             </div>
             <div className="cadastro-container">
                 <div className="entrar-dados">
+                    <div className="span-container-cadastro">
+                        <span id="cadastro"></span>
+                    </div>
                     <div className="nome">
                         <label>Nome:</label>
                         <input
