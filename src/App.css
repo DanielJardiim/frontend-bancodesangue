@@ -9,7 +9,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     height: 100px;
-    width: 1366px;
+    width: 1366vh;
     background-color: red;
 }
 
