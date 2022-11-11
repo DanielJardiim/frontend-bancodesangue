@@ -3,6 +3,15 @@ import { useState } from 'react';
 import './styles.css';
 import { createUsers } from '../../services/api';
 
+window.localStorage.setItem('A+', '0');
+window.localStorage.setItem('A-', '0');
+window.localStorage.setItem('B+', '0');
+window.localStorage.setItem('B-', '0');
+window.localStorage.setItem('AB+', '0');
+window.localStorage.setItem('AB-', '0');
+window.localStorage.setItem('O+', '0');
+window.localStorage.setItem('O-', '0');
+
 const CadastroPage = () => {
     const navigate = useNavigate();
 
