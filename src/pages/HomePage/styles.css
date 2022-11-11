@@ -23,14 +23,19 @@
 .home-container {
     background-color: silver;
     display: flex;
-    height: 85vh;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.home-container div {
+    padding: 5rem;
 }
 
 .home-container div button {
     background-color: red;
     border: none;
     margin-top: 240px;
-    margin-left: 150px;
     width: 250px;
     height: 250px;
     color: black;
@@ -43,5 +48,4 @@
 
 .cadastro-btn {
     margin-top: -150px;
-    margin-left: 50px;
 }
