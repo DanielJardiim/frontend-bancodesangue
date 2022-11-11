@@ -8,8 +8,8 @@ body {
 .header {
     display: table-cell;
     vertical-align: middle;
-    height: 100px;
-    width: 1366vh;
+    height: 10vh;
+    width: 100vw;
     background-color: red;
 }
 

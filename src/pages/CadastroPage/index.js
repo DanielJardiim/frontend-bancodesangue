@@ -64,6 +64,10 @@ const CadastroPage = () => {
                         document.getElementById('cadastro').innerHTML = '';
                         limpar();
                     }, 3000);
+                    window.localStorage.setItem(
+                        value.data.tipoSanguineo,
+                        value.data.valor
+                    );
                 }
             });
         }

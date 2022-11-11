@@ -5,12 +5,9 @@
 .banco-container {
     background-color: silver;
     display: flex;
-    height: 85vh;
-}
-
-.banco-container div {
-    margin-top: 3px;
-    margin-left: 80px;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 }
 
 .banco-container h1 {
@@ -19,7 +16,6 @@
 
 .h1 {
     margin-top: 40px;
-    margin-right: 40px;
 }
 
 .A-mais,
@@ -43,6 +39,4 @@
     height: 50px;
     border-radius: 50px;
     margin-top: 500px;
-    margin-left: 20px;
-    margin-right: -45px;
 }

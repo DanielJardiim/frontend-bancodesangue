@@ -20,25 +20,29 @@ const BancoPage = () => {
                     <div className="A-mais">
                         <h1 className="h1">A+</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('A+')}%
                         </h1>
                     </div>
                     <div className="A-menos">
                         <h1 className="h1">A-</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('A-')}%
                         </h1>
                     </div>
                     <div className="B-mais">
                         <h1 className="h1">B+</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('B+')}%
                         </h1>
                     </div>
                     <div className="B-menos">
                         <h1 className="h1">B-</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('B-')}%
                         </h1>
                     </div>
                 </div>
@@ -55,25 +59,29 @@ const BancoPage = () => {
                     <div className="AB-mais">
                         <h1 className="h1">AB+</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('AB+')}%
                         </h1>
                     </div>
                     <div className="AB-menos">
                         <h1 className="h1">AB-</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('AB-')}%
                         </h1>
                     </div>
                     <div className="O-mais">
                         <h1 className="h1">O+</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('O+')}%
                         </h1>
                     </div>
                     <div className="O-menos">
                         <h1 className="h1">O-</h1>
                         <h1>
-                            CAPACIDADE <br></br> EM ESTOQUE
+                            CAPACIDADE: 1000🔋 <br></br>
+                            EM ESTOQUE: {window.localStorage.getItem('O-')}%
                         </h1>
                     </div>
                 </div>
