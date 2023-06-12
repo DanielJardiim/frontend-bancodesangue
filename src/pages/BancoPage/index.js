@@ -7,7 +7,7 @@ const BancoPage = () => {
     const handleBancoVoltar = e => {
         e.preventDefault();
         console.log('Banco Voltar - OK');
-        navigate('/');
+        navigate('/home');
     };
 
     return (

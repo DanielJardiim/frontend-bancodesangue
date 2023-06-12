@@ -84,7 +84,7 @@ const CadastroPage = () => {
 
     const handleVoltar = e => {
         e.preventDefault();
-        navigate('/');
+        navigate('/home');
     };
 
     return (

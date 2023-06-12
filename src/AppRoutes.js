@@ -5,12 +5,14 @@ import HomePage from './pages/HomePage';
 import BancoPage from './pages/BancoPage';
 import CadastroPage from './pages/CadastroPage';
 import SobrePage from './pages/SobrePage';
+import LoginPage from './pages/LoginPage';
 
 const AppRoutes = () => {
     return (
         <Router>
             <Routes>
-                <Route exact path="/" element={<HomePage />} />
+                <Route exact path="/" element={<LoginPage />} />
+                <Route exact path="/home" element={<HomePage />} />
                 <Route exact path="/banco" element={<BancoPage />} />
                 <Route exact path="/cadastro" element={<CadastroPage />} />
                 <Route exact path="/sobre" element={<SobrePage />} />

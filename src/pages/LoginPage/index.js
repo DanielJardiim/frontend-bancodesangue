@@ -1,35 +1,27 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from '../../contexts/auth';
+import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import './styles.css';
-import imgGMC from '../../img/GMC.png';
 
-const LoginPage = () => {
-    const { login } = useContext(AuthContext);
+const LoginPage = () => {    
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
+        navigate('/home');
+    };
 
-        if (email && password) {
-            login(email, password);
-            return;
-        }
-
-        document.getElementById(
-            'auth'
-        ).innerHTML = `Entre com o email e a senha!`;
-        setTimeout(function () {
-            document.getElementById('auth').innerHTML = '';
-        }, 2000);
+    const handleRegistrar = e => {
+        e.preventDefault();
+        navigate('/cadastro');
     };
 
     return (
         <div className="login">
             <div className="login_container">
-                <div className="gmcImg_login">
-                    <img src={imgGMC} alt="gmc" />
+                <div className="gmcImg_login">                    
                 </div>
                 <h1 className="h1_login">Login</h1>
                 <form className="form_login">
@@ -66,6 +58,15 @@ const LoginPage = () => {
                             onClick={handleSubmit}
                         >
                             Login
+                        </button>
+                    </div>
+                    <div className="actions_login">
+                        <button
+                            className="btn_login"
+                            type="submit"
+                            onClick={handleRegistrar}
+                        >
+                            Registrar
                         </button>
                     </div>
                 </form>

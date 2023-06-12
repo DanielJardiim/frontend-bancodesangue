@@ -22,10 +22,22 @@ const HomePage = () => {
         navigate('/sobre');
     };
 
+    const handleLogoff = e => {
+        e.preventDefault();
+        console.log('LogOff - OK');
+        navigate('/');
+    };
+
     return (
         <div className="home-page">
             <div className="header">
-                <h1 className="h1-home">DOE FÁCIL</h1>
+                <h1 className="h1-home">Bloodmate Hub</h1>
+                <button
+                    className="btn-logoff"
+                    type="submit"
+                    onClick={handleLogoff}
+                > Logoff                     
+                </button>   
             </div>
             <div className="home-container">
                 <div className="banco-btn">
@@ -55,7 +67,7 @@ const HomePage = () => {
                     >
                     <h1 className="h2-sobre">Sobre nós</h1>    
                     </button>
-                </div>
+                </div>                            
             </div>
         </div>
     );

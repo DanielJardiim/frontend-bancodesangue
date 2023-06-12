@@ -7,7 +7,7 @@ const SobrePage = () => {
     const handleSobreVoltar = e => {
         e.preventDefault();
         console.log('Sobre Voltar - OK');
-        navigate('/');
+        navigate('/home');
     };
 
     return (
@@ -23,15 +23,7 @@ const SobrePage = () => {
                         de sangue no Brasil, a fim do facilitamento da doação de
                         sangue pelos cidadões.
                     </h1>
-                </div>
-                <div className="Integrantes">
-                    <h1 className="h1">Integrantes do Grupo</h1>
-                    <h1>
-                        Nome: Vinícius de Oliveira Azevedo - 1526 / Daniel
-                        Jardim Nunes - 1525<br></br>
-                        Curso: Engenharia de Computação
-                    </h1>
-                </div>
+                </div>                
                 <div className="Doadores">
                     <h1 className="h1">Quem doa para quem:</h1>
                     <h1>
