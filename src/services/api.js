@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: 'http://localhost:7000',
+    baseURL: 'http://localhost:3001',
 });
 
 // USERS
@@ -13,12 +13,10 @@ export const createUsers = async (
     tipoSanguineo,
     senha
 ) => {
-    return api.post('/bancodesangue/create', {
+    return api.post('/doadores', {
         nome,
         endereco,
-        telefone,
-        email,
-        tipoSanguineo,
-        senha,
+        telefone,        
+        tipoSanguineo        
     });
 };

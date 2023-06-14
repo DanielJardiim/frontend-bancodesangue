@@ -2,20 +2,20 @@
 
 describe('Doacao', () => {
     it('devem poder realizar um cadastro', () => {
-    cy.visit('http://localhost:3001/cadastro');
-    cy.get('[id=nome]').type('Joao');
-    cy.get('[id=endereco]').type('Av. João de Camargo, 510 - Centro');
-    cy.get('[id=telefone]').type('35 99999-1111');
-    cy.get('[id=email]').type('joao@inatel.br');
-    cy.get('[id=tipo-sanguineo]').type('A+');
-    cy.get('[id=senha]').type('123456');
+    cy.visit('http://localhost:3000/cadastro');
+    cy.get('[id=nome]').type('Vinicius');
+    cy.get('[id=endereco]').type('Rua Francisco Masseli - Inatel');
+    cy.get('[id=telefone]').type('(35) 992345678');
+    cy.get('[id=email]').type('vinicius@hotmail.com');
+    cy.get('[id=tipo-sanguineo]').type('B+');
+    cy.get('[id=senha]').type('vinicius123');
     });
 });
 
 describe('Login', () => {
     it('devem poder realizar um login', () => {
-    cy.visit('http://localhost:3001/');
-    cy.get('[id=email]').type('testuser@hotmail.com');
-    cy.get('[id=password]').type('testuser123');   
+    cy.visit('http://localhost:3000/');
+    cy.get('[id=email]').type('guilherme@hotmail.com');
+    cy.get('[id=password]').type('guilherme123');   
     });
 });
